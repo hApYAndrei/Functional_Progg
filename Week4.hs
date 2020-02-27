@@ -56,4 +56,11 @@ firstSquares x = [ (x - n)^2 | n <- [x-1,x-2..0]]
 
 --6
 capitalise :: String -> String
-capitalise "x" = toUpper "x"
+capitalise x = [ toUpper i | i <- x ]
+
+--7
+onlyDigits :: String -> String
+onlyDigits x = [ i | i <- x, isDigit i]
+
+--8
+--capMarks :: [StudentMark] -> [StudentMark]
