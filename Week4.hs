@@ -60,7 +60,12 @@ capitalise x = [ toUpper i | i <- x ]
 
 --7
 onlyDigits :: String -> String
-onlyDigits x = [ i | i <- x, isDigit i]
+onlyDigits digit = [ i | i <- digit, isDigit i]
 
 --8
---capMarks :: [StudentMark] -> [StudentMark]
+capMarks :: [StudentMark] -> [StudentMark]
+capMarks stmks = [ capMark(st,mk) | (st,mk) <- stmks ]
+
+--9
+--gradeStudents :: [StudentMark] -> [(String,Char)]
+--gradeStudents grades = [ grade(st,mk) | (st,mk) <- grades ]
