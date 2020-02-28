@@ -69,3 +69,21 @@ capMarks stmks = [ capMark(st,mk) | (st,mk) <- stmks ]
 --9
 --gradeStudents :: [StudentMark] -> [(String,Char)]
 --gradeStudents grades = [ grade(st,mk) | (st,mk) <- grades ]
+
+--10
+duplicate:: String -> Int -> String
+duplicate x y
+    | y == 1    = x
+    | otherwise = x ++ duplicate x (y - 1)
+
+--11
+divisors :: Int -> [Int]
+divisors n
+    | n <= 0    = []
+    | otherwise = [ i | i <- [1,2 ..n], (mod n i == 0) ]
+
+--12
+isPrime :: Int -> Bool
+isPrime x
+    | divisors x == [1,x] = True
+    | otherwise           = False
