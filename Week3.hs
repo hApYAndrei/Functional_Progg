@@ -93,5 +93,32 @@ sumNumbers n
  | n > 0   = n + sumNumbers(n - 1)
 
 --6
---sumSquares :: Int -> Int
---sumSquares n
+sumSquares :: Int -> Int
+sumSquares n
+    | n == 0     = 0
+    | otherwise  = n * n + sumSquares(n-1)
+
+--7
+power :: Int -> Int -> Int
+power x y
+    | x == 0    = 0
+    | y == 0    = 1
+    | otherwise = x * power x (y - 1)
+
+--8
+sumFromTo :: Int -> Int -> Int
+sumFromTo x y
+    | x > y      = 0
+    | otherwise  = x + sumFromTo(x + 1) y
+
+--9
+--import Prelude hiding (gcd)
+--gcd :: Int -> Int -> Int
+--gcd x y
+
+--10
+--intSquareRoot :: Int -> Int
+--intSquareRoot n = findRoot n n
+
+--findRoot :: Int -> Int -> Int
+--findRoot n s
